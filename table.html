@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Comparison Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GPU Comparison Table</h1>
+        <table id="gpuTable">
+            <thead>
+                <tr>
+                    <th>Frakt? <button onclick="sortTable(0)">-||-</button></th>
+                    <th>Namn <button onclick="sortTable(1)">-||-</button></th>
+                    <th>Kostnad <button onclick="sortTable(2)">-||-</button></th>
+                    <th>Prestanda <button onclick="sortTable(3)">-||-</button></th>
+                    <th>Pris/Prestanda <button onclick="sortTable(4)">Descending</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nej</td>
+                    <td><a href="https://www.blocket.se/annons/stockholm/gtx_980ti_6gb/1206010953" target="_blank">GeForce GTX 980 Ti</a></td>
+                    <td>800.00</td>
+                    <td>114</td>
+                    <td>701.75</td>
+                </tr>
+                <tr>
+                    <td>Nej</td>
+                    <td><a href="https://www.blocket.se/annons/stockholm/grafikkort_1070_msi/1206640524" target="_blank">GeForce GTX 1070</a></td>
+                    <td>1000.00</td>
+                    <td>128</td>
+                    <td>781.25</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/sodermanland/geforce_2060_rtx_6gb/1206751856" target="_blank">GeForce RTX 2060</a></td>
+                    <td>1200.00</td>
+                    <td>150</td>
+                    <td>800.00</td>
+                </tr>
+                <tr>
+                    <td>Nej</td>
+                    <td><a href="https://www.blocket.se/annons/stockholm/grafikkort_asus_geforce_gtx_1070_turbo_8gb/1206229793" target="_blank">GeForce GTX 1070 Turbo</a></td>
+                    <td>1100.00</td>
+                    <td>128</td>
+                    <td>859.38</td>
+                </tr>
+                <tr>
+                    <td>Nej</td>
+                    <td><a href="https://www.blocket.se/annons/jonkoping/asus_geforce_gtx_1080_8gb_rog_strix_/1206653404" target="_blank">GeForce GTX 1080</a></td>
+                    <td>1300.00</td>
+                    <td>150</td>
+                    <td>866.67</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/orebro/sapphire_radeon_rx5700_xt_8gb_nitro_oc/1206671116" target="_blank">Radeon RX 5700 XT</a></td>
+                    <td>1500.00</td>
+                    <td>171</td>
+                    <td>877.19</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/vasterbotten/msi_geforce_gtx_1070_gaming_x_8g_grafikkort_gpu/1206486850" target="_blank">GeForce GTX 1070 Gaming X 8G</a></td>
+                    <td>1161.00</td>
+                    <td>128</td>
+                    <td>907.03</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/goteborg/amd_radeon_rx_6600_8gb_mech_grafikkort_gpu_/1206347567" target="_blank">Radeon RX 6600</a></td>
+                    <td>1801.00</td>
+                    <td>163</td>
+                    <td>1104.91</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/gotland/nvidia_rtx_2060_grafikkort/1206636612" target="_blank">GeForce RTX 2060</a></td>
+                    <td>1700.00</td>
+                    <td>150</td>
+                    <td>1133.33</td>
+                </tr>
+                <tr>
+                    <td>Nej</td>
+                    <td><a href="https://www.blocket.se/annons/skane/grafikkort_2060/1206644435" target="_blank">GeForce RTX 2060</a></td>
+                    <td>1700.00</td>
+                    <td>150</td>
+                    <td>1133.33</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/stockholm/sapphire_radeon_rx_5700_xt_8gb_nitro_oc/1206569076" target="_blank">Radeon RX 5700 XT</a></td>
+                    <td>2000.00</td>
+                    <td>171</td>
+                    <td>1169.59</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/stockholm/asus_rog_strix_geforce_gtx_1080_8gb/1205604739" target="_blank">GeForce GTX 1080</a></td>
+                    <td>1800.00</td>
+                    <td>150</td>
+                    <td>1200.00</td>
+                </tr>
+                <tr>
+                    <td>Ja</td>
+                    <td><a href="https://www.blocket.se/annons/stockholm/amd_radeon_5600xt/1206696083" target="_blank">Radeon RX 5600 XT</a></td>
+                    <td>2000.00</td>
+                    <td>146</td>
+                    <td>1369.86</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const originalOrder = Array.from(document.querySelectorAll('#gpuTable tbody tr'));
+        let currentSortColumn = 4; // Start with Pris/Prestanda column
+        let isDescending = true; // Start with descending order
+
+        function sortTable(columnIndex) {
+            const table = document.getElementById('gpuTable');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const buttons = table.querySelectorAll('th button');
+
+            if (columnIndex === currentSortColumn) {
+                isDescending = !isDescending;
+            } else {
+                currentSortColumn = columnIndex;
+                isDescending = true;
+            }
+
+            rows.sort((a, b) => {
+                let aValue = a.cells[columnIndex].textContent;
+                let bValue = b.cells[columnIndex].textContent;
+
+                if (columnIndex === 0 || columnIndex === 1) {
+                    return isDescending ? bValue.localeCompare(aValue) : aValue.localeCompare(bValue);
+                } else {
+                    aValue = parseFloat(aValue.replace(/[^\d.-]/g, ''));
+                    bValue = parseFloat(bValue.replace(/[^\d.-]/g, ''));
+                    return isDescending ? bValue - aValue : aValue - bValue;
+                }
+            });
+
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+
+            buttons.forEach((button, index) => {
+                if (index === columnIndex) {
+                    button.textContent = isDescending ? "Minskande" : "Ökande";
+                } else {
+                    button.textContent = "-||-";
+                }
+            });
+        }
+
+        // Initial sort
+        sortTable(4);
+    </script>
+</body>
+</html>
